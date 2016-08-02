@@ -20,6 +20,7 @@ module Reform
         require "reform/form/active_model/model_validations"
         require "reform/form/active_model/form_builder_methods"
         require "reform/form/active_model"
+        require "reform/form/not_persisted"
         require "reform/form/active_model/validations"
         require "reform/form/multi_parameter_attributes"
 
@@ -44,6 +45,7 @@ module Reform
 
         # This adds Form#persisted? and all the other crap #form_for depends on. Grrrr.
         require "reform/form/active_model" # DISCUSS: only when using simple_form.
+        require "reform/form/not_persisted"
 
         Reform::Form.class_eval do
           include Reform::Form::ActiveModel # DISCUSS: only when using simple_form.
